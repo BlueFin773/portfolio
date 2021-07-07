@@ -1,14 +1,6 @@
 import React from 'react';
-import {
-  Typography,
-  Paper,
-  makeStyles,
-  Grid,
-  ButtonBase,
-  Avatar,
-} from '@material-ui/core';
+import { Typography, makeStyles, Grid, Avatar } from '@material-ui/core';
 import image from '../images/portrait.jpg';
-import { mergeClasses } from '@material-ui/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,11 +8,13 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     padding: 0,
+    height: '100vh',
+  },
+  content: {
+    maxWidth: 750,
+    minWidth: 450,
     margin: 'auto',
-    maxWidth: 700,
-    minWidth: 350,
     display: 'flex',
-    height: '92vh',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
@@ -39,31 +33,45 @@ const useStyles = makeStyles((theme) => ({
   typographyTitle: {
     fontFamily: 'Roboto',
     color: '#888',
-    fontSize: 30,
+    fontSize: 25,
+  },
+  typographyName: {
+    fontFamily: 'Roboto',
+    color: '#DC4371',
+    fontSize: 40,
+    fontWeight: 500,
+    component: 'span',
+    paddingLeft: 8,
   },
 }));
 
 const About = () => {
   const classes = useStyles();
+  const developer = '<Developer />';
   return (
     <div className={classes.root}>
-      <Grid container className={classes.container} spacing={2}>
-        <Grid direction='column'>
-          {' '}
-          <Grid item>
-            <Typography className={classes.typographyTitle}>
-              Matthew Litvinov
-            </Typography>
+      <Grid container className={classes.container}>
+        <Grid container className={classes.content} spacing={2}>
+          <Grid direction='column'>
+            <Grid item>
+              <Typography className={classes.typographyTitle}>
+                Hi, I'm{' '}
+                <Typography component='span' className={classes.typographyName}>
+                  Matthew Litvinov
+                </Typography>
+                .
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography className={classes.typography}>
+                {developer}
+              </Typography>
+            </Grid>
           </Grid>
-          <Grid item>
-            <Typography className={classes.typography}>
-              This is a subtitle
-            </Typography>
-          </Grid>
-        </Grid>
 
-        <Grid item>
-          <Avatar className={classes.image} alt='portrait' src={image} />
+          <Grid item>
+            <Avatar className={classes.image} alt='portrait' src={image} />
+          </Grid>
         </Grid>
       </Grid>
     </div>

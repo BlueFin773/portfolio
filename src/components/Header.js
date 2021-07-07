@@ -5,16 +5,20 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import EmailIcon from '@material-ui/icons/Email';
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/styles';
-import { Email } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   typographyStyles: {
     flex: 1,
     fontFamily: 'Roboto',
-    color: '#888',
+    color: '#DC4371',
   },
   iconStyles: {
     fontSize: 25,
+  },
+  iconButton: {
+    '&:hover': {
+      color: '#DC4371',
+    },
   },
 }));
 
@@ -22,18 +26,18 @@ const Header = () => {
   const classes = useStyles();
   return (
     <AppBar
-      position='static'
+      position='fixed'
       style={{ background: 'transparent', boxShadow: 'none' }}
     >
       <Toolbar>
         <Typography className={classes.typographyStyles}>Portfolio</Typography>
-        <IconButton>
+        <IconButton className={classes.iconButton}>
           <LinkedInIcon className={classes.iconStyles} />
         </IconButton>
-        <IconButton>
+        <IconButton className={classes.iconButton}>
           <GitHubIcon className={classes.iconStyles} />
         </IconButton>
-        <IconButton>
+        <IconButton className={classes.iconButton}>
           <EmailIcon className={classes.iconStyles} />
         </IconButton>
       </Toolbar>
