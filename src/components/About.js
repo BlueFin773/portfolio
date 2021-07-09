@@ -9,13 +9,15 @@ const useStyles = makeStyles((theme) => ({
   container: {
     padding: 0,
     height: '100vh',
+    margin: 'auto',
+    alignItems: 'center',
   },
   content: {
     maxWidth: 750,
     minWidth: 450,
     margin: 'auto',
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
   },
   image: {
@@ -29,11 +31,14 @@ const useStyles = makeStyles((theme) => ({
   typography: {
     fontFamily: 'Roboto',
     color: '#888',
+    paddingLeft: 20,
   },
   typographyTitle: {
     fontFamily: 'Roboto',
     color: '#888',
     fontSize: 25,
+    paddingLeft: 20,
+    paddingRight: 20,
   },
   typographyName: {
     fontFamily: 'Roboto',

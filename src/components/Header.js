@@ -26,8 +26,11 @@ const Header = () => {
   const classes = useStyles();
   return (
     <AppBar
-      position='fixed'
-      style={{ background: 'transparent', boxShadow: 'none' }}
+      position='static'
+      style={{
+        background: 'transparent',
+        boxShadow: 'none',
+      }}
     >
       <Toolbar>
         <Typography className={classes.typographyStyles}>Portfolio</Typography>

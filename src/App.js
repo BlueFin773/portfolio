@@ -12,13 +12,13 @@ function App() {
         <Header />
       </Grid>
       <Grid item container>
-        <Grid item xs={2} />
-        <Grid item xs={8}>
+        <Grid item xs={0} sm={2} />
+        <Grid item xs={12} sm={8}>
           <About />
-          <Projects />
           <Skills />
+          <Projects />
         </Grid>
-        <Grid item xs={2} />
+        <Grid item xs={0} sm={2} />
       </Grid>
     </Grid>
   );
