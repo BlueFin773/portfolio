@@ -6,14 +6,15 @@ import {
   ImageList,
   ImageListItem,
   Avatar,
+  Box,
 } from '@material-ui/core';
-import jsImage from '../images/js.svg';
-import htmlImage from '../images/html5.svg';
-import cssImage from '../images/css3.svg';
-import javaImage from '../images/java.svg';
-import nodeImage from '../images/node.svg';
-import reactImage from '../images/react.svg';
-import sqlImage from '../images/sql.svg';
+import { ReactComponent as JSLogo } from '../images/js.svg';
+import { ReactComponent as HTMLLogo } from '../images/html5.svg';
+import { ReactComponent as CSSLogo } from '../images/css3.svg';
+import { ReactComponent as JAVALogo } from '../images/java.svg';
+import { ReactComponent as NODELogo } from '../images/node.svg';
+import { ReactComponent as REACTLogo } from '../images/react.svg';
+import { ReactComponent as SQLLogo } from '../images/sql.svg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,64 +25,45 @@ const useStyles = makeStyles((theme) => ({
   imageList: {
     maxWidth: 750,
     minWidth: 450,
+    display: 'flex',
     justifyContent: 'center',
-    paddingTop: 10,
-    paddingLeft: 100,
-    paddingRight: 100,
+    paddingTop: 75,
     paddingBottom: 10,
     flexWrap: 'nowrap',
-    transform: 'translateZ(0)',
   },
 
   image: {
-    heigth: 40,
-    width: 40,
-    paddingLeft: 10,
-    paddingRight: 10,
+    width: 50,
+    height: 50,
+    paddingLeft: 6,
+    paddingRight: 6,
+    color: '#838383',
+    transition: 'transform 250ms ease-out',
+    '&:hover': {
+      color: '#DC4371',
+      transform: 'scale(1.1)',
+      transformOrigin: 'center',
+    },
   },
 }));
-
-const itemData = [
-  {
-    img: jsImage,
-    title: 'JavaScript',
-  },
-  {
-    img: htmlImage,
-    title: 'HTML5',
-  },
-  {
-    img: cssImage,
-    title: 'CSS3',
-  },
-  {
-    img: reactImage,
-    title: 'React',
-  },
-  {
-    img: nodeImage,
-    title: 'NodeJS',
-  },
-
-  {
-    img: sqlImage,
-    title: 'SQL',
-  },
-  {
-    img: javaImage,
-    title: 'Java',
-  },
-];
 
 const Skills = () => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div>
       <div>
-        <Divider />
-        <ImageList className={classes.imageList} rowHeight={75} cols={7}>
+        <div className={classes.imageList}>
+          <REACTLogo className={classes.image} />
+          <JSLogo className={classes.image} />
+          <HTMLLogo className={classes.image} />
+          <CSSLogo className={classes.image} />
+          <NODELogo className={classes.image} />
+          <SQLLogo className={classes.image} />
+          <JAVALogo className={classes.image} />
+        </div>
+        {/* <ImageList className={classes.imageList} rowHeight={75} cols={7}>
           {itemData.map((item) => (
-            <ImageListItem className={classes.imageListItem} key={item.img}>
+            <ImageListItem key={item.img}>
               <img
                 className={classes.image}
                 src={item.img}
@@ -90,8 +72,7 @@ const Skills = () => {
               />
             </ImageListItem>
           ))}
-        </ImageList>
-        <Divider />
+        </ImageList> */}
       </div>
     </div>
   );

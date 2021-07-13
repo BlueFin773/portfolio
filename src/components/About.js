@@ -1,6 +1,13 @@
 import React from 'react';
-import { Typography, makeStyles, Grid, Avatar } from '@material-ui/core';
+import {
+  Typography,
+  makeStyles,
+  Grid,
+  Avatar,
+  Divider,
+} from '@material-ui/core';
 import image from '../images/portrait.jpg';
+import Skills from './Skills';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -13,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
   content: {
-    maxWidth: 750,
+    maxWidth: 800,
     minWidth: 450,
     margin: 'auto',
     display: 'flex',
@@ -77,6 +84,12 @@ const About = () => {
           <Grid item>
             <Avatar className={classes.image} alt='portrait' src={image} />
           </Grid>
+          <Grid item>
+            <Skills />
+          </Grid>
+        </Grid>
+        <Grid item>
+          <Divider />
         </Grid>
       </Grid>
     </div>
