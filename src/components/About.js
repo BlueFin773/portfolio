@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
   content: {
-    maxWidth: 800,
+    maxWidth: 750,
     minWidth: 450,
     margin: 'auto',
     display: 'flex',
@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: '100%',
     width: 250,
     height: 250,
+    marginBottom: 40,
   },
   typography: {
     fontFamily: 'Roboto',

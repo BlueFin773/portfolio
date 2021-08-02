@@ -1,20 +1,12 @@
 import React from 'react';
-import {
-  Typography,
-  makeStyles,
-  Divider,
-  ImageList,
-  ImageListItem,
-  Avatar,
-  Box,
-} from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import { ReactComponent as JSLogo } from '../images/js.svg';
 import { ReactComponent as HTMLLogo } from '../images/html5.svg';
 import { ReactComponent as CSSLogo } from '../images/css3.svg';
 import { ReactComponent as JAVALogo } from '../images/java.svg';
 import { ReactComponent as NODELogo } from '../images/node.svg';
 import { ReactComponent as REACTLogo } from '../images/react.svg';
-import { ReactComponent as SQLLogo } from '../images/sql.svg';
+import { ReactComponent as DATALogo } from '../images/data.svg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,7 +19,6 @@ const useStyles = makeStyles((theme) => ({
     minWidth: 450,
     display: 'flex',
     justifyContent: 'center',
-    paddingTop: 75,
     paddingBottom: 10,
     flexWrap: 'nowrap',
   },
@@ -38,10 +29,10 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: 6,
     paddingRight: 6,
     color: '#838383',
-    transition: 'transform 250ms ease-out',
+    transition: 'transform 500ms ease-out',
     '&:hover': {
       color: '#DC4371',
-      transform: 'scale(1.1)',
+      transform: 'scale(1.2)',
       transformOrigin: 'center',
     },
   },
@@ -50,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
 const Skills = () => {
   const classes = useStyles();
   return (
-    <div>
+    <div className={classes.root}>
       <div>
         <div className={classes.imageList}>
           <REACTLogo className={classes.image} />
@@ -58,21 +49,9 @@ const Skills = () => {
           <HTMLLogo className={classes.image} />
           <CSSLogo className={classes.image} />
           <NODELogo className={classes.image} />
-          <SQLLogo className={classes.image} />
+          <DATALogo className={classes.image} />
           <JAVALogo className={classes.image} />
         </div>
-        {/* <ImageList className={classes.imageList} rowHeight={75} cols={7}>
-          {itemData.map((item) => (
-            <ImageListItem key={item.img}>
-              <img
-                className={classes.image}
-                src={item.img}
-                alt={item.title}
-                loading='lazy'
-              />
-            </ImageListItem>
-          ))}
-        </ImageList> */}
       </div>
     </div>
   );
