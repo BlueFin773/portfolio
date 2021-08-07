@@ -7,13 +7,31 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Autorenew } from '@material-ui/icons';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 500,
+    minWidth: 500,
+    display: 'flex',
   },
   media: {
-    height: 140,
+    width: 200,
+    height: 200,
+  },
+  content: {
+    display: 'flex',
+    flexDirection: 'column',
+    flex: '1',
+  },
+  buttons: {
+    justifyContent: 'flex-end',
+    marginTop: 'auto',
+  },
+  details: {
+    display: 'flex',
+    flexDirection: 'row',
+
+    width: '100%',
   },
 });
 
@@ -22,19 +40,23 @@ export default function ProjectCard({ image, title, description }) {
 
   return (
     <Card className={classes.root}>
-      <CardMedia
-        className={classes.media}
-        image={image}
-        title='Project Image'
-      />
-      <CardContent>
-        <Typography>{title}</Typography>
-        <Typography>{description}</Typography>
-      </CardContent>
-      <CardActions>
-        <Button>Live</Button>
-        <Button>Github</Button>
-      </CardActions>
+      <div className={classes.details}>
+        <CardMedia
+          className={classes.media}
+          image={image}
+          title='Project Image'
+        />
+        <div className={classes.content}>
+          <CardContent>
+            <Typography>{title}</Typography>
+            <Typography>{description}</Typography>
+          </CardContent>
+          <CardActions className={classes.buttons}>
+            <Button>Live</Button>
+            <Button>Github</Button>
+          </CardActions>
+        </div>
+      </div>
     </Card>
   );
 }
