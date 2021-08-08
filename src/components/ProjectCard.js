@@ -13,6 +13,7 @@ const useStyles = makeStyles({
   root: {
     minWidth: 500,
     display: 'flex',
+    marginTop: '30px',
   },
   media: {
     width: 200,
