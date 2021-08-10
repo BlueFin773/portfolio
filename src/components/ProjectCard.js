@@ -34,6 +34,18 @@ const useStyles = makeStyles({
 
     width: '100%',
   },
+  cardTitle: {
+    fontFamily: 'Roboto',
+    color: '#DC4371',
+    fontSize: 20,
+    fontWeight: 500,
+  },
+  cardDescription: {
+    fontFamily: 'Roboto',
+    color: '#888',
+    fontSize: 16,
+    fontWeight: 500,
+  },
 });
 
 export default function ProjectCard({ image, title, description }) {
@@ -49,8 +61,10 @@ export default function ProjectCard({ image, title, description }) {
         />
         <div className={classes.content}>
           <CardContent>
-            <Typography>{title}</Typography>
-            <Typography>{description}</Typography>
+            <Typography className={classes.cardTitle}>{title}</Typography>
+            <Typography className={classes.cardDescription}>
+              {description}
+            </Typography>
           </CardContent>
           <CardActions className={classes.buttons}>
             <Button>Live</Button>

@@ -2,6 +2,8 @@ import React from 'react';
 import { Typography, makeStyles, Divider } from '@material-ui/core';
 import ProjectCard from './ProjectCard';
 import projectImageOne from '../images/portrait.jpg';
+import projectImageTwo from '../images/portrait.jpg';
+import projectImageThree from '../images/portrait.jpg';
 
 const useStyles = makeStyles((theme) => ({
   typographyTitle: {
@@ -20,7 +22,17 @@ const Projects = () => {
       <Divider />
       <ProjectCard
         image={projectImageOne}
-        title='Title'
+        title='Project One'
+        description='description........................................'
+      />
+      <ProjectCard
+        image={projectImageTwo}
+        title='Project Two'
+        description='description........................................'
+      />
+      <ProjectCard
+        image={projectImageThree}
+        title='Project Three'
         description='description........................................'
       />
     </div>
