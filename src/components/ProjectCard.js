@@ -11,13 +11,17 @@ import { Autorenew } from '@material-ui/icons';
 
 const useStyles = makeStyles({
   root: {
-    minWidth: 500,
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  card: {
     display: 'flex',
     marginTop: '30px',
+    width: '75%',
   },
   media: {
-    width: 200,
-    height: 200,
+    width: 300,
+    height: 300,
   },
   content: {
     display: 'flex',
@@ -31,7 +35,6 @@ const useStyles = makeStyles({
   details: {
     display: 'flex',
     flexDirection: 'row',
-
     width: '100%',
   },
   cardTitle: {
@@ -52,26 +55,28 @@ export default function ProjectCard({ image, title, description }) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
-      <div className={classes.details}>
-        <CardMedia
-          className={classes.media}
-          image={image}
-          title='Project Image'
-        />
-        <div className={classes.content}>
-          <CardContent>
-            <Typography className={classes.cardTitle}>{title}</Typography>
-            <Typography className={classes.cardDescription}>
-              {description}
-            </Typography>
-          </CardContent>
-          <CardActions className={classes.buttons}>
-            <Button>Live</Button>
-            <Button>Github</Button>
-          </CardActions>
+    <div className={classes.root}>
+      <Card className={classes.card}>
+        <div className={classes.details}>
+          <CardMedia
+            className={classes.media}
+            image={image}
+            title='Project Image'
+          />
+          <div className={classes.content}>
+            <CardContent>
+              <Typography className={classes.cardTitle}>{title}</Typography>
+              <Typography className={classes.cardDescription}>
+                {description}
+              </Typography>
+            </CardContent>
+            <CardActions className={classes.buttons}>
+              <Button>Live</Button>
+              <Button>Github</Button>
+            </CardActions>
+          </div>
         </div>
-      </div>
-    </Card>
+      </Card>
+    </div>
   );
 }

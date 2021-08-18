@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: 8,
   },
 }));
-
+// TODO: Add fade in effect on load
 const About = () => {
   const classes = useStyles();
   const developer = '<Developer />';
