@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Fragment } from '@material-ui/core';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import EmailIcon from '@material-ui/icons/Email';
@@ -15,6 +15,10 @@ const useStyles = makeStyles((theme) => ({
   iconStyles: {
     fontSize: 25,
   },
+  typography: {
+    textAlign: 'center',
+    fontSize: 12,
+  },
   iconButton: {
     '&:hover': {
       color: '#DC4371',
@@ -25,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
 const Footer = () => {
   const classes = useStyles();
   return (
+    <React.Fragment>
     <AppBar
       className={classes.root}
       position='static'
@@ -42,9 +47,11 @@ const Footer = () => {
         </IconButton>
         <IconButton className={classes.iconButton}>
           <EmailIcon className={classes.iconStyles} />
-        </IconButton>
+          </IconButton>
       </Toolbar>
     </AppBar>
+    <Typography className={classes.typography}>Designed by Matthew Litvinov</Typography>
+    </React.Fragment>
   );
 };
 

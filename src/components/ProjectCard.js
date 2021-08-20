@@ -17,7 +17,9 @@ const useStyles = makeStyles({
   card: {
     display: 'flex',
     marginTop: '30px',
-    width: '75%',
+    width: '100%',
+    minWidth: '500px',
+    maxWidth: '1000px',
   },
   media: {
     width: 300,
