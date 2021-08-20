@@ -6,7 +6,6 @@ import Projects from './components/Projects';
 import Footer from './components/Footer';
 import background from './images/background.svg';
 
-//TODO: create footer
 //TODO: add links to header
 //TODO: add content to project cards
 //TODO: add visual effects, background parallax, about page fade in in load
