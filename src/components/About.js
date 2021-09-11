@@ -6,55 +6,80 @@ import {
   Avatar,
   Divider,
 } from '@material-ui/core';
-import image from '../images/portrait.jpg';
+import image from '../images/code.svg';
 import Skills from './Skills';
+import Button from '@material-ui/core/Button';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  button: {
+    marginLeft:20,
+    marginTop: 40,
+    color: "#DC4371",
+    [theme.breakpoints.down('sm')]: {margin: "auto", marginTop:40,},
+  },
   container: {
-    padding: 0,
     height: '100vh',
-    margin: 'auto',
-    alignItems: 'center',
+    justifyContent: 'center',
+    margin:"auto",
+    marginTop: 200,
+    [theme.breakpoints.down('sm')]: {marginTop: 0},
   },
   content: {
-    maxWidth: 750,
-    minWidth: 450,
-    margin: 'auto',
+    margin: 0,
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
+    paddingBottom: 200,
+    alignItems: 'top',
+  },
+  flex: {
+    display: "flex",
+  },
+  column: {
+    marginTop: 75,
+    display: "flex",
+  },
+  bottomAligned: {
+    marginTop: 50,
   },
   image: {
-    margin: 'auto',
-    display: 'block',
-    maxWidth: '100%',
-    maxHeight: '100%',
-    width: 250,
-    height: 250,
-    marginBottom: 40,
+    width: 550,
+    height: 550,
+    marginTop: 0,
+    paddingTop: 0,
   },
   typography: {
     fontFamily: 'Roboto',
     color: '#888',
+    fontSize: 16,
     paddingLeft: 20,
+    maxWidth: 600,
+    [theme.breakpoints.down('sm')]: {textAlign: "center",},
+  },
+  typographySubtitle: {
+    fontFamily: 'Roboto',
+    color: '#888',
+    fontSize: 20,
+    paddingLeft: 20,
+    [theme.breakpoints.down('sm')]: {textAlign: "center",},
   },
   typographyTitle: {
     fontFamily: 'Roboto',
     color: '#888',
-    fontSize: 25,
+    fontSize: 20,
     paddingLeft: 20,
-    paddingRight: 20,
+    [theme.breakpoints.down('sm')]: {textAlign: "center",},
   },
   typographyName: {
     fontFamily: 'Roboto',
     color: '#DC4371',
-    fontSize: 40,
+    fontSize: 60,
     fontWeight: 500,
     component: 'span',
-    paddingLeft: 8,
+    [theme.breakpoints.down('sm')]: {textAlign: "center",},
   },
 }));
 // TODO: Add fade in effect on load
@@ -65,7 +90,7 @@ const About = () => {
     <div className={classes.root}>
       <Grid container className={classes.container}>
         <Grid container className={classes.content} spacing={2}>
-          <Grid direction='column'>
+          <Grid direction='column' className={classes.column}>
             <Grid item>
               <Typography className={classes.typographyTitle}>
                 Hi, I'm{' '}
@@ -76,20 +101,26 @@ const About = () => {
               </Typography>
             </Grid>
             <Grid item>
-              <Typography className={classes.typography}>
+              <Typography className={classes.typographySubtitle}>
                 {developer}
               </Typography>
             </Grid>
+            <Grid item className={classes.bottomAligned}>
+              <Typography className={classes.typography}> I am a full stack web developer who enjoys creating beautiful, dynamic, and responsive web applications.</Typography>
+            </Grid>
+            <Grid item className={classes.flex}>
+              <Button className={classes.button} variant="outlined">Contact Me</Button>
+            </Grid>
           </Grid>
 
-          <Grid item>
+          <Grid item >
             <Avatar className={classes.image} alt='portrait' src={image} />
           </Grid>
-          <Grid item>
+          {/* <Grid item>
             <Skills />
-          </Grid>
+          </Grid> */}
         </Grid>
-        <Grid item>
+        <Grid item >
           <Divider />
         </Grid>
       </Grid>
