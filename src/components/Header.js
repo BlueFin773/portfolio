@@ -10,11 +10,11 @@ const useStyles = makeStyles((theme) => ({
   typographyStyles: {
     flex: 1,
     fontFamily: 'Roboto',
-    color: '#DC4371',
+    color: 'white',
   },
   link:{
     fontFamily: 'Roboto',
-    color: '#DC4371',
+    color: '#white',
     paddingRight: 30,
   },
   iconStyles: {
@@ -33,9 +33,9 @@ const Header = () => {
     <AppBar
       position='static'
       style={{
-        backgroundColor: "white",
-        background: 'transparent',
-        boxShadow: 'none',
+        backgroundColor: "#C93C67",
+        //background: 'transparent',
+        boxShadow: '1',
         minHeight: '5vh',
       }}
     >

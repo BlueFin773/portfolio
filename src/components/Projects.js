@@ -8,7 +8,7 @@ import projectImageThree from '../images/portrait.jpg';
 const useStyles = makeStyles((theme) => ({
   container: {
     flexGrow: 1,
-    backgroundColor: "red",
+    backgroundColor: "white",
   },
   typographyTitle: {
     fontFamily: 'Roboto',

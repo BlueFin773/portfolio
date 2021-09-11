@@ -14,16 +14,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     minHeight: '15vh',
+    backgroundColor: "white",
   },
-  imageList: {
-    maxWidth: 750,
-    minWidth: 450,
-    display: 'flex',
-    justifyContent: 'center',
-    paddingBottom: 10,
-    flexWrap: 'nowrap',
-  },
-
   image: {
     width: 75,
     height: 75,
@@ -38,8 +30,15 @@ const useStyles = makeStyles((theme) => ({
       transformOrigin: 'center',
     },
   },
-
-  typography: {
+  imageList: {
+    maxWidth: 750,
+    minWidth: 450,
+    display: 'flex',
+    justifyContent: 'center',
+    paddingBottom: 10,
+    flexWrap: 'nowrap',
+  },
+  typographyTitle: {
     fontFamily: 'Roboto',
     color: '#DC4371',
     fontSize: 40,
@@ -47,23 +46,34 @@ const useStyles = makeStyles((theme) => ({
     component: 'span',
     textAlign: 'center',
   },
+  typographyName: {
+    fontFamily: 'Roboto',
+    color: '#DC4371',
+    fontSize: 20,
+    fontWeight: 500,
+    marginTop: 15,
+    component: 'span',
+    textAlign: 'center',
+  }
 }));
+
 
 const Skills = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <div>
-        <Typography className={classes.typography}>My Skills </Typography>
+        {/* <Typography className={classes.typographyTitle}>My Skills </Typography> */}
         <div className={classes.imageList}>
-          <REACTLogo className={classes.image} />
-          <JSLogo className={classes.image} />
-          <HTMLLogo className={classes.image} />
-          <CSSLogo className={classes.image} />
-          <NODELogo className={classes.image} />
-          <DATALogo className={classes.image} />
-          <JAVALogo className={classes.image} />
+          <REACTLogo name="React" onMouseEnter={() => document.getElementById("skillName").innerHTML = "React"}  onMouseLeave={() => document.getElementById("skillName").innerHTML = ""} className={classes.image} />
+          <JSLogo name="JavaScript" onMouseEnter={() => document.getElementById("skillName").innerHTML = "JavaScript"}  onMouseLeave={() => document.getElementById("skillName").innerHTML = ""} className={classes.image} />
+          <HTMLLogo name="HTML" onMouseEnter={() => document.getElementById("skillName").innerHTML = "HTML"}  onMouseLeave={() => document.getElementById("skillName").innerHTML = ""} className={classes.image} />
+          <CSSLogo name="CSS" onMouseEnter={() => document.getElementById("skillName").innerHTML = "CSS"}  onMouseLeave={() => document.getElementById("skillName").innerHTML = ""} className={classes.image} />
+          <NODELogo name="NodeJS" onMouseEnter={() => document.getElementById("skillName").innerHTML = "NodeJS"}  onMouseLeave={() => document.getElementById("skillName").innerHTML = ""} className={classes.image} />
+          <DATALogo name="Database" onMouseEnter={() => document.getElementById("skillName").innerHTML = "Database"}  onMouseLeave={() => document.getElementById("skillName").innerHTML = ""} className={classes.image} />
+          <JAVALogo name="Java" onMouseEnter={() => document.getElementById("skillName").innerHTML = "Java"}  onMouseLeave={() => document.getElementById("skillName").innerHTML = ""} className={classes.image} />
         </div>
+        <Typography id="skillName" className={classes.typographyName}> </Typography>
       </div>
     </div>
   );

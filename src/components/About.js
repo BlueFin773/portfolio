@@ -7,7 +7,6 @@ import {
   Divider,
 } from '@material-ui/core';
 import image from '../images/code.svg';
-import Skills from './Skills';
 import Button from '@material-ui/core/Button';
 
 
