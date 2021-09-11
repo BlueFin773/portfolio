@@ -6,8 +6,9 @@ import projectImageTwo from '../images/portrait.jpg';
 import projectImageThree from '../images/portrait.jpg';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  container: {
     flexGrow: 1,
+    backgroundColor: "red",
   },
   typographyTitle: {
     fontFamily: 'Roboto',
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 const Projects = () => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div className={classes.container}>
       <Typography className={classes.typographyTitle}>Projects</Typography>
       <Divider />
       <ProjectCard

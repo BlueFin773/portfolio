@@ -22,11 +22,13 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {margin: "auto", marginTop:40,},
   },
   container: {
-    height: '100vh',
+    backgroundColor: "white",
+    minHeight: '80vh',
     justifyContent: 'center',
     margin:"auto",
-    marginTop: 200,
-    [theme.breakpoints.down('sm')]: {marginTop: 0},
+    paddingTop: 200,
+    //paddingBottom: 200,
+    [theme.breakpoints.down('sm')]: {paddingTop: 0},
   },
   content: {
     margin: 0,

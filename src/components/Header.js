@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Link } from '@material-ui/core';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import EmailIcon from '@material-ui/icons/Email';
@@ -11,6 +11,11 @@ const useStyles = makeStyles((theme) => ({
     flex: 1,
     fontFamily: 'Roboto',
     color: '#DC4371',
+  },
+  link:{
+    fontFamily: 'Roboto',
+    color: '#DC4371',
+    paddingRight: 30,
   },
   iconStyles: {
     fontSize: 25,
@@ -28,21 +33,20 @@ const Header = () => {
     <AppBar
       position='static'
       style={{
+        backgroundColor: "white",
         background: 'transparent',
         boxShadow: 'none',
+        minHeight: '5vh',
       }}
     >
       <Toolbar>
         <Typography className={classes.typographyStyles}>Portfolio</Typography>
-        <IconButton className={classes.iconButton}>
-          <LinkedInIcon className={classes.iconStyles} />
-        </IconButton>
-        <IconButton className={classes.iconButton}>
-          <GitHubIcon className={classes.iconStyles} />
-        </IconButton>
-        <IconButton className={classes.iconButton}>
-          <EmailIcon className={classes.iconStyles} />
-        </IconButton>
+        <Typography >
+          <Link className={classes.link} href=''  color="inherit">Skills</Link>
+          <Link className={classes.link} href=''  color="inherit">Projects</Link>
+          <Link className={classes.link} href=''  color="inherit">Education</Link>
+          <Link className={classes.link} href=''  color="inherit">Contact</Link>
+        </Typography>
       </Toolbar>
     </AppBar>
   );

@@ -2,6 +2,7 @@ import React, {Fragment} from 'react';
 import { Grid, makeStyles } from '@material-ui/core';
 import Header from './components/Header';
 import About from './components/About';
+import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -21,6 +22,7 @@ const useStyles = makeStyles(() => ({
 //TODO: add content to project cards
 //TODO: add visual effects, background parallax, about page fade in in load
 //TODO: add git svg icon
+//TODO: display skill name dynamically on icon hover
 
 function App() {
   const classes = useStyles();
@@ -29,6 +31,7 @@ function App() {
       <CssBaseline />
         <Header />
         <About />
+        <Skills />
         <Projects />
         <Footer />
     </Fragment>
