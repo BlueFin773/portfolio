@@ -44,7 +44,7 @@ const Header = () => {
         <Typography >
           <Link className={classes.link} href=''  color="inherit">Skills</Link>
           <Link className={classes.link} href=''  color="inherit">Projects</Link>
-          <Link className={classes.link} href=''  color="inherit">Education</Link>
+          <Link className={classes.link} href=''  color="inherit">Resume</Link>
           <Link className={classes.link} href=''  color="inherit">Contact</Link>
         </Typography>
       </Toolbar>

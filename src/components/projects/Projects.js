@@ -1,9 +1,9 @@
 import React from 'react';
 import { Typography, makeStyles, Divider } from '@material-ui/core';
 import ProjectCard from './ProjectCard';
-import projectImageOne from '../images/portrait.jpg';
-import projectImageTwo from '../images/portrait.jpg';
-import projectImageThree from '../images/portrait.jpg';
+import projectImageOne from '../../images/portrait.jpg';
+import projectImageTwo from '../../images/portrait.jpg';
+import projectImageThree from '../../images/portrait.jpg';
 
 const useStyles = makeStyles((theme) => ({
   container: {

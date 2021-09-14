@@ -7,10 +7,11 @@ import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    marginTop: '100px',
-    display: 'flex',
-    alignItems: 'center',
+
+  appbar: {
+    boxShadow: 'none',
+    alignItems:"center",
+    backgroundColor: "#FFF"
   },
   iconStyles: {
     fontSize: 25,
@@ -27,18 +28,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-
 const Footer = () => {
   const classes = useStyles();
   return (
     <Fragment>
     <AppBar
-      className={classes.root}
+      className={classes.appbar}
       position='static'
-      style={{
-        background: 'transparent',
-        boxShadow: 'none',
-      }}
     >
       <Toolbar>
         <IconButton className={classes.iconButton}>

@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     display: 'flex',
     justifyContent: 'center',
-    //minHeight: '15vh',
     backgroundColor: "transparent",
   },
   image: {
