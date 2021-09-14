@@ -8,6 +8,8 @@ import {
 } from '@material-ui/core';
 import image from '../images/code.svg';
 import Button from '@material-ui/core/Button';
+import background from '../images/background.svg';
+import Skills from './Skills';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -21,8 +23,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {margin: "auto", marginTop:40,},
   },
   container: {
-    backgroundColor: "white",
-    minHeight: '80vh',
+    backgroundImage: `url(${background})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    minHeight: '95vh',
     justifyContent: 'center',
     margin:"auto",
     paddingTop: 200,
@@ -40,11 +44,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
   },
   column: {
-    marginTop: 75,
+    marginTop:110,
     display: "flex",
   },
   bottomAligned: {
-    marginTop: 50,
+    marginTop: 110,
   },
   image: {
     width: 550,
@@ -123,6 +127,9 @@ const About = () => {
         </Grid>
         <Grid item >
           <Divider />
+        </Grid>
+        <Grid item>
+          <Skills />
         </Grid>
       </Grid>
     </div>

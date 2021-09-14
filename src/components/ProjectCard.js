@@ -7,7 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { Autorenew } from '@material-ui/icons';
+
 
 const useStyles = makeStyles({
   root: {
@@ -17,9 +17,10 @@ const useStyles = makeStyles({
   card: {
     display: 'flex',
     marginTop: '30px',
-    width: '100%',
-    minWidth: '500px',
-    maxWidth: '1000px',
+    width: '75%',
+    //minWidth: '500px',
+    maxWidth: '900px',
+
   },
   media: {
     width: 300,
@@ -59,13 +60,22 @@ export default function ProjectCard({ image, title, description }) {
   return (
     <div className={classes.root}>
       <Card className={classes.card}>
+      
         <div className={classes.details}>
+        <div>
+        <CardActionArea>
           <CardMedia
+
             className={classes.media}
             image={image}
             title='Project Image'
+
           />
+          </CardActionArea>
+          </div>
+          
           <div className={classes.content}>
+          
             <CardContent>
               <Typography className={classes.cardTitle}>{title}</Typography>
               <Typography className={classes.cardDescription}>

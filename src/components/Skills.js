@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, Typography } from '@material-ui/core';
+import { makeStyles, Typography, Divider } from '@material-ui/core';
 import { ReactComponent as JSLogo } from '../images/js.svg';
 import { ReactComponent as HTMLLogo } from '../images/html5.svg';
 import { ReactComponent as CSSLogo } from '../images/css3.svg';
@@ -13,12 +13,12 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     display: 'flex',
     justifyContent: 'center',
-    minHeight: '15vh',
-    backgroundColor: "white",
+    //minHeight: '15vh',
+    backgroundColor: "transparent",
   },
   image: {
-    width: 75,
-    height: 75,
+    width: 65,
+    height: 65,
     paddingLeft: 10,
     paddingRight: 10,
     marginTop: 20,
@@ -54,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 15,
     component: 'span',
     textAlign: 'center',
+    minHeight: 45,
   }
 }));
 
@@ -63,9 +64,10 @@ const Skills = () => {
   return (
     <div className={classes.root}>
       <div>
+      <Divider />
         {/* <Typography className={classes.typographyTitle}>My Skills </Typography> */}
         <div className={classes.imageList}>
-          <REACTLogo name="React" onMouseEnter={() => document.getElementById("skillName").innerHTML = "React"}  onMouseLeave={() => document.getElementById("skillName").innerHTML = ""} className={classes.image} />
+          <REACTLogo name="React" onMouseEnter={() => document.getElementById("skillName").innerHTML = "ReactJS"}  onMouseLeave={() => document.getElementById("skillName").innerHTML = ""} className={classes.image} />
           <JSLogo name="JavaScript" onMouseEnter={() => document.getElementById("skillName").innerHTML = "JavaScript"}  onMouseLeave={() => document.getElementById("skillName").innerHTML = ""} className={classes.image} />
           <HTMLLogo name="HTML" onMouseEnter={() => document.getElementById("skillName").innerHTML = "HTML"}  onMouseLeave={() => document.getElementById("skillName").innerHTML = ""} className={classes.image} />
           <CSSLogo name="CSS" onMouseEnter={() => document.getElementById("skillName").innerHTML = "CSS"}  onMouseLeave={() => document.getElementById("skillName").innerHTML = ""} className={classes.image} />
