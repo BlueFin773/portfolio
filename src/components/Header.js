@@ -36,7 +36,8 @@ const Header = () => {
         backgroundColor: "#C93C67",
         //background: 'transparent',
         boxShadow: '1',
-        minHeight: '5vh',
+        // minHeight: '5vh',
+        // maxHeight: '5vh',
       }}
     >
       <Toolbar>

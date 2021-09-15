@@ -44,6 +44,11 @@ const useStyles = makeStyles((theme) => ({
         color: '#888',
         fontSize: 16,
     },
+    divider: {
+        width: '75%',
+        maxWidth: 900,
+        margin: 'auto',
+    },
 
 }));
 
@@ -55,7 +60,7 @@ const Resume = () => {
             <div className={classes.container}>
                 <Grid container spacing={3} direction="row" justifyContent="flex-start" alignItems="baseline" xs={12}>
                     <Grid item xs={9} sm={3}>
-                        <Typography className={classes.sectionTitle}>EDUCATION</Typography>
+                        <Typography ><span className={classes.sectionTitle}>EDUCATION</span></Typography>
                     </Grid>
                     <Grid container spacing={1} direction="column" xs={6}>
                         <Grid item xs={12}>
@@ -72,11 +77,11 @@ const Resume = () => {
                 </Grid>
 
             </div>
-            <Divider />
+            <Divider className={classes.divider}/>
             <div className={classes.container}>
                 <Grid container spacing={3} direction="row" justifyContent="flex-start" alignItems="baseline" xs={12}>
                     <Grid item xs={9} sm={3}>
-                        <Typography className={classes.sectionTitle}>EXPERIENCE</Typography>
+                        <Typography><span className={classes.sectionTitle}>EXPERIENCE</span></Typography>
                     </Grid>
                     <Grid container spacing={1} direction="column" xs={6}>
                         <Grid item xs={12}>

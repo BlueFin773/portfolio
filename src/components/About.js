@@ -10,11 +10,18 @@ import image from '../images/code.svg';
 import Button from '@material-ui/core/Button';
 import background from '../images/background.svg';
 import Skills from './Skills';
+import Header from './Header';
 
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    backgroundImage: `url(${background})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    minHeight: '100vh',
   },
   button: {
     marginLeft:20,
@@ -23,38 +30,33 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {margin: "auto", marginTop:40,},
   },
   container: {
-    backgroundImage: `url(${background})`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    minHeight: '95vh',
+    display: 'flex',
     justifyContent: 'center',
+    alignItems: 'center',
     margin:"auto",
-    paddingTop: 200,
+    width: '75%',
+    maxWidth: 900,
     //paddingBottom: 200, 1170
     [theme.breakpoints.down('sm')]: {paddingTop: 0},
   },
   content: {
-    margin: 0,
-    display: 'flex',
-    justifyContent: 'center',
-    paddingBottom: 200,
-    alignItems: 'top',
-
+     justifyContent: 'center',
   },
   flex: {
-    display: "flex",
+    display: 'flex',
   },
   column: {
-    marginTop:110,
+    marginTop: 110,
     display: "flex",
   },
   bottomAligned: {
-    marginTop: 110,
+    marginTop: 90,
+    marginRight: 30,
   },
   image: {
-    width: 550,
-    height: 550,
-    marginTop: 0,
+    width: 450,
+    height: 450,
+    marginTop: 50,
     paddingTop: 0,
   },
   typography: {
@@ -62,13 +64,13 @@ const useStyles = makeStyles((theme) => ({
     color: '#888',
     fontSize: 16,
     paddingLeft: 20,
-    maxWidth: 600,
+    maxWidth: 400,
     [theme.breakpoints.down('sm')]: {textAlign: "center",},
   },
   typographySubtitle: {
     fontFamily: 'Roboto',
     color: '#888',
-    fontSize: 20,
+    fontSize: 18,
     paddingLeft: 20,
     [theme.breakpoints.down('sm')]: {textAlign: "center",},
   },
@@ -82,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
   typographyName: {
     fontFamily: 'Roboto',
     color: '#DC4371',
-    fontSize: 60,
+    fontSize: 40,
     fontWeight: 500,
     component: 'span',
     [theme.breakpoints.down('sm')]: {textAlign: "center",},
@@ -94,6 +96,7 @@ const About = () => {
   const developer = '<Developer />';
   return (
     <div className={classes.root}>
+      <Header />
       <Grid container className={classes.container}>
         <Grid container className={classes.content} spacing={2}>
           <Grid direction='column' className={classes.column}>
@@ -126,13 +129,10 @@ const About = () => {
             <Skills />
           </Grid> */}
         </Grid>
-        <Grid item >
-          <Divider />
-        </Grid>
-        <Grid item>
-          <Skills />
-        </Grid>
       </Grid>
+          <div className={classes.skills}>
+            <Skills />
+          </div>
     </div>
   );
 };
