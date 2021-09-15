@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     margin:"auto",
     paddingTop: 200,
-    //paddingBottom: 200,
+    //paddingBottom: 200, 1170
     [theme.breakpoints.down('sm')]: {paddingTop: 0},
   },
   content: {
