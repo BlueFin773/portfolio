@@ -64,7 +64,6 @@ const Skills = () => {
     <div className={classes.root}>
       <div>
       <Divider />
-        {/* <Typography className={classes.typographyTitle}>My Skills </Typography> */}
         <div className={classes.imageList}>
           <REACTLogo name="React" onMouseEnter={() => document.getElementById("skillName").innerHTML = "ReactJS"}  onMouseLeave={() => document.getElementById("skillName").innerHTML = ""} className={classes.image} />
           <JSLogo name="JavaScript" onMouseEnter={() => document.getElementById("skillName").innerHTML = "JavaScript"}  onMouseLeave={() => document.getElementById("skillName").innerHTML = ""} className={classes.image} />

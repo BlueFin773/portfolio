@@ -1,9 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Link } from '@material-ui/core';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import EmailIcon from '@material-ui/icons/Email';
-import IconButton from '@material-ui/core/IconButton';
+import { AppBar, Toolbar, Typography, Link, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -25,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
       color: '#DC4371',
     },
   },
+  button: {
+    color: 'white',
+  }
 }));
 
 const Header = () => {
@@ -34,19 +33,21 @@ const Header = () => {
       position='static'
       style={{
         backgroundColor: "#C93C67",
-        //background: 'transparent',
         boxShadow: '1',
-        // minHeight: '5vh',
-        // maxHeight: '5vh',
       }}
     >
       <Toolbar>
         <Typography className={classes.typographyStyles}>Portfolio</Typography>
         <Typography >
-          <Link className={classes.link} href=''  color="inherit">Skills</Link>
-          <Link className={classes.link} href=''  color="inherit">Projects</Link>
-          <Link className={classes.link} href=''  color="inherit">Resume</Link>
-          <Link className={classes.link} href=''  color="inherit">Contact</Link>
+        <Button className={classes.button} onClick={()=>{
+            document.getElementById("projects").scrollIntoView({behavior: 'smooth'});
+          }}>Projects</Button>
+        <Button className={classes.button} onClick={()=>{
+            document.getElementById("resume").scrollIntoView({behavior: 'smooth'});
+          }}>Resume</Button>
+          <Button className={classes.button} onClick={()=>{
+            document.getElementById("contact").scrollIntoView({behavior: 'smooth'});
+          }}>Contact</Button>
         </Typography>
       </Toolbar>
     </AppBar>

@@ -7,14 +7,15 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         backgroundColor: "#FFF",
         paddingTop: 50,
+        paddingBottom: 50,
 
     },
     container: {
         width: "75%",
         margin: "auto",
         maxWidth: 900,
-        marginBottom: 30,
-        marginTop: 30,
+        paddingBottom: 30,
+        paddingTop: 30,
     },
     sectionTitle: {
         fontFamily: 'Roboto',
@@ -30,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'black',
         fontSize: 24,
         fontWeight: 700,
+        width:"100%",
     },
     subTitle: {
         fontFamily: 'Libre Baskerville',
@@ -56,22 +58,19 @@ const Resume = () => {
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
+        <div className={classes.root} id="resume">
             <div className={classes.container}>
                 <Grid container spacing={3} direction="row" justifyContent="flex-start" alignItems="baseline" xs={12}>
                     <Grid item xs={9} sm={3}>
                         <Typography ><span className={classes.sectionTitle}>EDUCATION</span></Typography>
                     </Grid>
-                    <Grid container spacing={1} direction="column" xs={6}>
+                    <Grid container spacing={1} direction="column" sm={9} xs={12}>
                         <Grid item xs={12}>
                             <Typography className={classes.title}>Athabasca University</Typography>
 
                         </Grid>
                         <Grid item xs={12}>
                             <Typography className={classes.subTitle}>BSc Computing and Information Systems</Typography>
-                        </Grid>
-                        <Grid item xs={12}>
-                            <Typography className={classes.description}>Description</Typography>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -83,7 +82,7 @@ const Resume = () => {
                     <Grid item xs={9} sm={3}>
                         <Typography><span className={classes.sectionTitle}>EXPERIENCE</span></Typography>
                     </Grid>
-                    <Grid container spacing={1} direction="column" xs={6}>
+                    <Grid container spacing={1} direction="column" sm={9} xs={12}>
                         <Grid item xs={12}>
                             <Typography className={classes.title}>Independent Contractor Remote</Typography>
 
@@ -91,8 +90,22 @@ const Resume = () => {
                         <Grid item xs={12}>
                             <Typography className={classes.subTitle}>Appen Limited</Typography>
                         </Grid>
+                    </Grid>
+                </Grid>
+            </div>
+            <Divider className={classes.divider}/>
+            <div className={classes.container}>
+                <Grid container spacing={3} direction="row" justifyContent="flex-start" alignItems="baseline" xs={12}>
+                    <Grid item xs={9} sm={3}>
+                        <Typography><span className={classes.sectionTitle}>VOLUNTEER</span></Typography>
+                    </Grid>
+                    <Grid container spacing={1} direction="column" sm={9} xs={12}>
                         <Grid item xs={12}>
-                            <Typography className={classes.description}>Description</Typography>
+                            <Typography className={classes.title}>WORDPRESS DEVELOPER</Typography>
+
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Typography className={classes.subTitle}>Volunteer</Typography>
                         </Grid>
                     </Grid>
                 </Grid>

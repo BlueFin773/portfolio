@@ -4,7 +4,6 @@ import {
   makeStyles,
   Grid,
   Avatar,
-  Divider,
 } from '@material-ui/core';
 import image from '../images/code.svg';
 import Button from '@material-ui/core/Button';
@@ -25,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     marginLeft:20,
-    marginTop: 40,
+    marginTop: 55,
     color: "#DC4371",
     [theme.breakpoints.down('sm')]: {margin: "auto", marginTop:40,},
   },
@@ -36,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
     margin:"auto",
     width: '75%',
     maxWidth: 900,
-    //paddingBottom: 200, 1170
     [theme.breakpoints.down('sm')]: {paddingTop: 0},
   },
   content: {
@@ -90,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {textAlign: "center",},
   },
 }));
-// TODO: Add fade in effect on load
+
 const About = () => {
   const classes = useStyles();
   const developer = '<Developer />';
@@ -115,19 +113,19 @@ const About = () => {
               </Typography>
             </Grid>
             <Grid item className={classes.bottomAligned}>
-              <Typography className={classes.typography}> I am a full stack web developer who enjoys creating beautiful, dynamic, and responsive web applications.</Typography>
+              <Typography className={classes.typography}> I am a web developer who enjoys creating beautiful, dynamic, and responsive web applications.</Typography>
             </Grid>
             <Grid item className={classes.flex}>
-              <Button className={classes.button} variant="outlined">Contact Me</Button>
+              <Button onClick={()=>{
+                document.getElementById("contact").scrollIntoView({behavior: 'smooth'});
+                }
+              }
+              className={classes.button} variant="outlined">Contact Me</Button>
             </Grid>
           </Grid>
-
           <Grid item >
             <Avatar className={classes.image} alt='portrait' src={image} />
           </Grid>
-          {/* <Grid item>
-            <Skills />
-          </Grid> */}
         </Grid>
       </Grid>
           <div className={classes.skills}>

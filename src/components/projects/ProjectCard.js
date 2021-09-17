@@ -25,6 +25,7 @@ const useStyles = makeStyles({
   media: {
     width: 300,
     height: 300,
+    objectFit: 'contain',
   },
   content: {
     display: 'flex',
@@ -45,6 +46,7 @@ const useStyles = makeStyles({
     color: '#DC4371',
     fontSize: 20,
     fontWeight: 500,
+    paddingBottom: 45,
   },
   cardDescription: {
     fontFamily: 'Roboto',
@@ -54,7 +56,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ProjectCard({ image, title, description }) {
+export default function ProjectCard({ image, title, description, link }) {
   const classes = useStyles();
 
   return (
@@ -63,12 +65,14 @@ export default function ProjectCard({ image, title, description }) {
       
         <div className={classes.details}>
         <div>
-        <CardActionArea>
+        <CardActionArea href={link}>
           <CardMedia
 
             className={classes.media}
             image={image}
             title='Project Image'
+            component="img"
+            
 
           />
           </CardActionArea>
@@ -83,8 +87,7 @@ export default function ProjectCard({ image, title, description }) {
               </Typography>
             </CardContent>
             <CardActions className={classes.buttons}>
-              <Button>Live</Button>
-              <Button>Github</Button>
+              <Button href={link} target="_blank" rel="noopener noreferrer">Github</Button>
             </CardActions>
           </div>
         </div>
