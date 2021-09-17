@@ -20,6 +20,7 @@ const useStyles = makeStyles({
     width: '75%',
     //minWidth: '500px',
     maxWidth: '900px',
+    maxHeight: '300px',
 
   },
   media: {
