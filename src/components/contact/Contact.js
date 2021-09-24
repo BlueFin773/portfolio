@@ -1,6 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import emailjs from 'emailjs-com';
 import { makeStyles, Typography, Button } from '@material-ui/core';
+
+//status message on email send
+const Result = () =>{
+  return(<p>Your message was sent successfully.</p>);
+}
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -58,7 +63,8 @@ const useStyles = makeStyles((theme) => ({
 export default function Contact() {
 
     //EmailJS
-  function sendEmail(e) {
+  const [result, showResult] = useState(false);
+  const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs.sendForm('service_5gh8ir9', 'template_60v56d4', e.target, 'user_3xpDozRf4IUQYcf7OYTxT')
@@ -67,7 +73,13 @@ export default function Contact() {
       }, (error) => {
           console.log(error.text);
       });
-  }
+      e.target.reset();
+      showResult(true);
+  };
+//hide status message after 5 seconds
+  setTimeout(() => {
+    showResult(false);
+  },5000);
 
   const classes = useStyles();
   return (
@@ -81,6 +93,9 @@ export default function Contact() {
         <label className={classes.label}>Message</label>
         <textarea rows="6" className={classes.input} name="message" required/>
         <Button className={classes.button}  type="submit" value="Send">Send</Button>
+        <div className=''>
+          {result ? <Result/> : null}
+        </div>
         </form>
     </div>
   );

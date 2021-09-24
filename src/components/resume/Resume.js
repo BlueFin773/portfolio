@@ -101,7 +101,7 @@ const Resume = () => {
                     </Grid>
                     <Grid container spacing={1} direction="column" sm={9} xs={12}>
                         <Grid item xs={12}>
-                            <Typography className={classes.title}>WORDPRESS DEVELOPER</Typography>
+                            <Typography className={classes.title}>Wordpress Developer</Typography>
 
                         </Grid>
                         <Grid item xs={12}>

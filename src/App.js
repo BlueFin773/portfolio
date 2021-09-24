@@ -7,13 +7,12 @@ import Footer from './components/Footer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 
-//TODO: add content to project cards
 //TODO: change project cards for mobile size
 //TODO: add visual effects, background parallax, about page fade in in load
-//TODO: finish education section
-//TODO: finish contact section
 //TODO: form validation
+//TODO: add confirmation of sent email
 //TODO: return to top button after contact section
+//TODO: import font
 
 
 function App() {
